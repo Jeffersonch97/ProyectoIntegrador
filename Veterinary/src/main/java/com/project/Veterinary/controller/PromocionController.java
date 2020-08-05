@@ -68,7 +68,7 @@ public class PromocionController {
 	 }
 
 	 @PreAuthorize("hasAuthority('admin')")
-	 @GetMapping("/editp/{id}")
+	 @GetMapping("/edit/{id}")
 	 public String showUpdateForm(@PathVariable("id") Long id, Model model) {
 	     Promocion promocion = repo.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid promotion Id:" + id));
 	     model.addAttribute("promotion", promocion);
@@ -76,7 +76,7 @@ public class PromocionController {
 	 }
 	 
 	 @PreAuthorize("hasAuthority('admin')")
-	 @PostMapping("/updatep/{id}")
+	 @PostMapping("/update/{id}")
 	 public String updatePromotion(@PathVariable("id") Long id, Promocion promocion, BindingResult result, Model model, @RequestParam("file") MultipartFile file) {
 	     if (result.hasErrors()) {
 	          promocion.setId(id);
