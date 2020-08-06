@@ -57,9 +57,16 @@
 				<li class="nav-item active">
 					<a class="nav-link font-color-general mr-3 ml-3" href="#contacto">Contacto</a>
 				</li>
+				 <div th:unless="${#authorization.expression('isAuthenticated()')}">  
 				<li class="nav-item active">
 					<a class="nav-link font-color-general mr-3 ml-3" href="/productos/login">Ingresar</a>
 				</li>
+				</div>
+				<div sec:authorize="isAuthenticated()">
+				<li class="nav-item active">
+					<a class="nav-link font-color-general mr-3 ml-3" href="/productos/login">Cerrar sesión</a>
+				</li>
+				</div>
 			</ul>
 		</div>
 	</nav>

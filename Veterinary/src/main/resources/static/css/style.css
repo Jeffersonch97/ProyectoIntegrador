@@ -11,7 +11,10 @@ body {
 .font-color-general {
 	color: rgb(67, 105, 176);
 }
-
+.nav-link
+{
+	color: rgb(67, 105, 176);
+}
 .brand-name {
 	font-size: 1.8rem;
 	color: rgb(67, 105, 176);
@@ -19,7 +22,7 @@ body {
 }
 
 .bg-img-principal {
-	background-image: url("/images/main.jpg");
+	background-image: url("../images/main.jpg");
 	background-size: cover;
 	height: 650px;
 	background-position: center center;
@@ -55,7 +58,7 @@ body {
 
 	/* tenemos 1 imagen específica para móvil */
 	.bg-img-principal {
-		background-image: url("/images/main_movil.png");
+		background-image: url("../images/main_movil.png");
 		background-size: cover;
 		height: 500px;
 		background-position: center center;	
