@@ -54,7 +54,7 @@
 				</li>
 				<div sec:authorize="isAuthenticated()">
       			<li class="nav-item">
-       			<a class="nav-link font-color-general mr-3 ml-3" href="/productos/add_recipe">Nuevo producto</a> 
+       			<a class="nav-link font-color-general mr-3 ml-3" href="/promociones/add_promotion">Nueva promoción</a> 
       			</li>
 				</div>
 				 <div th:unless="${#authorization.expression('isAuthenticated()')}">  
