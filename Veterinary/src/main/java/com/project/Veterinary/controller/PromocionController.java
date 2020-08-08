@@ -46,6 +46,11 @@ public class PromocionController {
 	     return "list_promotions";
 	 }
 	 
+	 @GetMapping("/list_promotionA")
+	 public String adminPromotions(Model model) {
+		 model.addAttribute("promotions", repo.findAll());
+	     return "list_promotionsA";
+	 }
 
 	 @PreAuthorize("hasAuthority('admin')")
 	 @RequestMapping("/private")
@@ -64,7 +69,7 @@ public class PromocionController {
 	     picService.uploadPicture(file, idPic);
 	     promocion.setFoto(idPic);
 	     repo.save(promocion);   
-	     return "redirect:list_promotion";
+	     return "redirect:list_promotionA";
 	 }
 
 	 @PreAuthorize("hasAuthority('admin')")
@@ -90,7 +95,7 @@ public class PromocionController {
 		     promocion.setFoto(idPic);
 	     }
 	     repo.save(promocion);
-	     return "redirect:/promociones/list_promotion";
+	     return "redirect:/promociones/list_promotionA";
 	 }
 
 	 @PreAuthorize("hasAuthority('admin')")
@@ -100,6 +105,6 @@ public class PromocionController {
 	     picService.deletePicture(promocion.getFoto());
 	     repo.delete(promocion);	     
 	     model.addAttribute("promotions", repo.findAll());
-	     return "list_promotions";
+	     return "list_promotionsA";
 	 }
 }

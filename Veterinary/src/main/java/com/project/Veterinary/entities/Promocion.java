@@ -15,6 +15,7 @@ public class Promocion {
 	private Long id;
 	private String nombre;
 	private UUID foto;
+	//private Integer descuento;
 	public String getNombre() {
 		return nombre;
 	}

@@ -33,10 +33,6 @@ public class ProductoController {
 		return "index";
 	 }
 	 
-	 @RequestMapping("/about")
-	 public String about() {
-		return "about";
-	 }
 	 
 	 @GetMapping("/add_recipe")
 	 public String showSignUpForm(Producto producto) {
@@ -47,6 +43,12 @@ public class ProductoController {
 	 public String showRecipes(Model model) {
 		 model.addAttribute("recipes", repo.findAll());
 	     return "list_recipes";
+	 }
+	 
+	 @GetMapping("/listA")
+	 public String adminRecipes(Model model) {
+		 model.addAttribute("recipes", repo.findAll());
+	     return "list_recipesA";
 	 }
 	 
 	 @RequestMapping("/login")
@@ -76,7 +78,7 @@ public class ProductoController {
 	     picService.uploadPicture(file, idPic);
 	     producto.setFoto(idPic);
 	     repo.save(producto);   
-	     return "redirect:list";
+	     return "redirect:listA";
 	 }
 
 	 @PreAuthorize("hasAuthority('admin')")
@@ -102,7 +104,7 @@ public class ProductoController {
 		     producto.setFoto(idPic);
 	     }
 	     repo.save(producto);
-	     return "redirect:/productos/list";
+	     return "redirect:/productos/listA";
 	 }
 
 	 @PreAuthorize("hasAuthority('admin')")
@@ -112,6 +114,6 @@ public class ProductoController {
 	     picService.deletePicture(producto.getFoto());
 	     repo.delete(producto);	     
 	     model.addAttribute("recipes", repo.findAll());
-	     return "list_recipes";
+	     return "list_recipesA";
 	 }
 }
