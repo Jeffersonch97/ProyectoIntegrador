@@ -15,7 +15,13 @@ public class Promocion {
 	private Long id;
 	private String nombre;
 	private UUID foto;
-	//private Integer descuento;
+	private Integer descuento;
+	public Integer getDescuento() {
+		return descuento;
+	}
+	public void setDescuento(Integer descuento) {
+		this.descuento = descuento;
+	}
 	public String getNombre() {
 		return nombre;
 	}

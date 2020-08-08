@@ -101,7 +101,7 @@
                                         <th style="width: 51%">Nombre</th>
                                     
                                         <!-- // <th style="width: 15%">Descripcion</th> -->
-										<!-- // <th style="width: 10%">Precio</th> -->
+										 <th style="width: 10%">Descuento</th>
                                         <th style="width: 10%">Imagen</th>                                       
                                         <th style="width: 8%">Ver</th>
                                         <div sec:authorize="isAuthenticated()">
@@ -114,7 +114,7 @@
                                     <tr th:each="promocion : ${promotions}">
                                         <td th:text="${promocion.nombre}"></td>
                                         <!-- <td th:text="${promocion.descripcion}"></td> -->
-                                        <!-- <td th:text="${promocion.precio}"></td> -->
+                                        <td th:text="${promocion.descuento}"></td>
                                         <td><img th:src="@{/pic/{id}(id=${promocion.foto}+.jpg)}" width="80" class="rounded"></td>
                                         
                                         <td>
