@@ -20,54 +20,42 @@ public class Persona {
 	private String Genero;
 	private String Usuario;
 	private String Contrasena;
-
-
 	public String getCedula() {
 		return Cedula;
 	}
-
 	public void setCedula(String cedula) {
 		Cedula = cedula;
 	}
-
 	public String getNombre() {
 		return Nombre;
 	}
-
 	public void setNombre(String nombre) {
 		Nombre = nombre;
 	}
-
 	public String getApellido() {
 		return Apellido;
 	}
-
 	public void setApellido(String apellido) {
 		Apellido = apellido;
 	}
-
 	public String getGenero() {
 		return Genero;
 	}
-
 	public void setGenero(String genero) {
 		Genero = genero;
 	}
-
 	public String getUsuario() {
 		return Usuario;
 	}
-
 	public void setUsuario(String usuario) {
 		Usuario = usuario;
 	}
-
 	public String getContrasena() {
 		return Contrasena;
 	}
-
 	public void setContrasena(String contrasena) {
 		Contrasena = contrasena;
 	}
 
-}
+
+	
