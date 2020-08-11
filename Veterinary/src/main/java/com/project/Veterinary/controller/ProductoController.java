@@ -28,7 +28,7 @@ public class ProductoController {
 	    PictureService picService;
 	 
 	 
-	 @RequestMapping("")
+	 @RequestMapping({"","/index"})
 	 public String index() {
 		return "index";
 	 }

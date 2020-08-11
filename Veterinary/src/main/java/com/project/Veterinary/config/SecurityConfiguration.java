@@ -15,27 +15,27 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	 @Override
 	    protected void configure(HttpSecurity http) throws Exception {
-	        http.authorizeRequests()
-	            .antMatchers(
-	                "/",
-	            	"/registration**",
-	                "/js/**",
-	                "/css/**",
-	                "/img/**",
-	                "/h2-console/**",
-	                "/webjars/**").permitAll()
-	            .and().csrf().ignoringAntMatchers("/h2-console/**")
-	            .and().headers().frameOptions().sameOrigin()
-	            .and()
-	            .formLogin()
-	            .loginPage("/productos/login")
-	            .permitAll()
-	            .successForwardUrl("/productos/private")
-	            .and()
-	            .logout()
-	            .permitAll()
-	            .logoutRequestMatcher(new AntPathRequestMatcher("/productos/logout"))
-	            .logoutSuccessUrl("/productos");
+		 http.authorizeRequests()
+         .antMatchers(
+             "/",
+         	"/registration**",
+             "/js/**",
+             "/css/**",
+             "/img/**",
+             "/h2-console/**",
+             "/webjars/**").permitAll()
+         .and().csrf().ignoringAntMatchers("/h2-console/**")
+         .and().headers().frameOptions().sameOrigin()
+         .and()
+         .formLogin()
+         .loginPage("/productos/login")
+         .permitAll()
+         .successForwardUrl("/productos/private")
+         .and()
+         .logout()
+         .permitAll()
+         .logoutRequestMatcher(new AntPathRequestMatcher("/productos/logout"))
+         .logoutSuccessUrl("/");
 	    }	
 		
 	    @Autowired

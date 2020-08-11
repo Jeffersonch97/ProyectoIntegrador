@@ -24,7 +24,7 @@
   <div class="collapse navbar-collapse" id="main-navigation">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="/promociones">Inicio</a>
+        <a class="navbar-brand" href="">Veterinaria Quito</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/promociones/list">Ver promociones</a>
@@ -56,7 +56,10 @@
                                 <label for="nombre" class="col-form-label">Nombre</label> 
                                 <input type="text" th:field="*{nombre}" class="form-control" id="nombre" placeholder="Nombre">
                             </div>
-                            
+                             <div class="form-group col-md-12">
+                                <label for="descuento" class="col-form-label">Descuento</label> 
+                                <input type="text" th:field="*{descuento}" class="form-control" id="descuento" placeholder="Descuento">
+                            </div>
                             <div class="form-group col-md-12">
                             	<label for="name" class="col-form-label">Subir foto</label>
                             	<input type="file" name="file"  accept="image/*" class="form-control"/> 
