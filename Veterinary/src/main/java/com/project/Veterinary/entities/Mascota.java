@@ -15,6 +15,13 @@ public class Mascota {
 	private Long id;
 	private String nombre;
 	private String descripcion;
+	private String propietario;
+	public String getPropietario() {
+		return propietario;
+	}
+	public void setPropietario(String propietario) {
+		this.propietario = propietario;
+	}
 	public Long getId() {
 		return id;
 	}

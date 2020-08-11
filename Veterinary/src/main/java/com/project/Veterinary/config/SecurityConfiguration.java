@@ -32,7 +32,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
          
          .antMatchers("/users/add_user").access("hasRole('ADMIN')")
          .antMatchers("/users/list_user").access("hasRole('ADMIN')")
-       
+         .antMatchers("/mascotas/list_pet").access("hasRole('ADMIN')")
+         .antMatchers("/mascotas/add_pet").access("hasRole('ADMIN')")
          .and().csrf().ignoringAntMatchers("/h2-console/**")
          .and().headers().frameOptions().sameOrigin()
          .and()
