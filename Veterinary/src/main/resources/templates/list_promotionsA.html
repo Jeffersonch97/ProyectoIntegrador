@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Psytrance Recipes!</title>
+    <title>Veterinary System</title>
     <script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,7 +45,7 @@
 
 	<!-- INICIO NAVBAR -->
 	    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="">Veterinaria Quito</a>
+  <a class="navbar-brand" href="/">Veterinaria Quito</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -90,6 +90,11 @@
         </div>
           
       </li>
+<div sec:authorize="isAuthenticated()">
+	   <li class="nav-item">
+	   <a class="nav-link" href="/promociones/add_promotion">Nueva promoción</a>
+       </li>
+	   </div>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0"> -->
       <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->

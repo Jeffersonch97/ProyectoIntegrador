@@ -24,6 +24,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
              "/img/**",
              "/h2-console/**",
              "/webjars/**").permitAll()
+         .antMatchers("/productos/listA").access("hasRole('ADMIN')")
+         .antMatchers("/productos/add").access("hasRole('ADMIN')")
+         
+         .antMatchers("/promociones/list_promotionA").access("hasRole('ADMIN')")
+         .antMatchers("/promociones/add_promotion").access("hasRole('ADMIN')")
+         
+         .antMatchers("/users/add_user").access("hasRole('ADMIN')")
+         .antMatchers("/users/list_user").access("hasRole('ADMIN')")
+       
          .and().csrf().ignoringAntMatchers("/h2-console/**")
          .and().headers().frameOptions().sameOrigin()
          .and()
