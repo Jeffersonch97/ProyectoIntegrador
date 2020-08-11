@@ -34,7 +34,25 @@ body {
   background-position: center;
   position: relative;
 }
-
+.box img{
+  width: 100%;
+  height: auto;
+}
+@supports(object-fit: cover){
+    .box img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+div.content {
+width: 600px;
+margin: 0 auto 0 auto;
+padding: 5px;
+background-color: #000000;
+color: #fff;
+}
+div.content img { max-width: 98%; }
 .overlay {
   position: absolute;
   min-height: 100%;

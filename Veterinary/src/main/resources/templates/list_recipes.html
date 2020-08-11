@@ -146,7 +146,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4" th:each="producto : ${recipes}">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" th:src="@{/pic/{id}(id=${producto.foto}+.jpg)}" width="240" alt=""></a>
+              <a href="#"><img class="card-img-top" th:src="@{/pic/{id}(id=${producto.foto}+.jpg)}" width="240" heigth="300"alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a th:text="${producto.nombre}"></a>
